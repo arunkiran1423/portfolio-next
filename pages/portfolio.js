@@ -3,6 +3,7 @@ import { withRouter } from "next/router";
 import axios from "axios";
 
 import BaseLayout from "../components/layouts/BaseLayout";
+import BasePage from "../components/layouts/BasePage";
 
 class portfolio extends Component {
   static async getInitialProps({ query }) {
@@ -23,9 +24,11 @@ class portfolio extends Component {
     return (
       <div>
         <BaseLayout>
-          <h1>{portfolio.title}</h1>
-          <p>Body:{portfolio.body}</p>
-          <p>Id:{portfolio.id}</p>
+          <BasePage>
+            <h1>{portfolio.title}</h1>
+            <p>Body:{portfolio.body}</p>
+            <p>Id:{portfolio.id}</p>
+          </BasePage>
         </BaseLayout>
       </div>
     );
